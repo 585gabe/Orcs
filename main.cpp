@@ -15,6 +15,7 @@ string answer;
 string scbp;
 
 void all_tribes();
+void chill();
 void threelead();
 void feast();
 void s_poison();
@@ -34,6 +35,8 @@ void ocean_war();
 void desert_war();
 void war_tribe();
 void dip_tribe();
+
+
 void clan_chief();
 void slow();
 void push();
@@ -68,6 +71,16 @@ void threelead() {
 	all_tribes();
 cin.get();
 	return;
+}
+
+void chill() {
+	cout<< "The tribe is unhappy with the current events. Instead of following your leadership. The whole tribe spends the next 3 days tripping on shrooms and lounging about.";
+	cout<< " How will you handle this? \n" ;
+	while (answer != "Hang the instigators for treason") {
+		cout << "They ignore you. What will you do now? \n";
+		getline(cin, answer);
+	}
+	threelead();
 }
 void feast() {
 	cout << "You go to the feast and see a grand meal. Everyone stars digging in. Talk to the person next to you? (Y/N)";
