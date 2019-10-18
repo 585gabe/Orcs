@@ -92,13 +92,15 @@ void s_poison() {
 	return;
 }
 void desertt() {
-	cout << "The desert tribe runs out to welcome you as a fellow orc. They carry you in to thier heavily fortified village seeing that you are unarmed. You tell them that you would like to join their tribe. They accept you in and they throw a feast in your honor.";
+	cout << "The desert tribe runs out to welcome you as a fellow orc. They carry you in to thier heavily fortified village seeing that you are seemingly unarmed."
+	<< " You tell them that you would like to join their tribe. They accept you in and they throw a feast in your honor. You get very merry\n";
 	while(feast());
 	cin.get();
 	return;
 }
 void fmlead() {
-	cout << "As the ruler of two clans you must decide on one location to live. You decide to live in the forest because all your forces are here. You get everything organized for the next war. Declare war on the desert or ocean tribe? (D/O)";
+	cout << "As the ruler of two clans you must decide on one location to live. You decide to live in the forest because all your forces are here."
+	<< " You get everything organized for the next war.\n?Declare war on the desert or ocean tribe?\n (D/O)";
 	cin >> answer;
 	//multiple choice: choice 1
 	if (answer == "O") {
@@ -306,7 +308,10 @@ cin.get();
 }
 
 void f_sneak() {
-	cout << "You assault the village and the other orcs hear your sneak attack coming and kill your sneak attack. The rest of you soldiers die due too swords and arrows. They publicly execute you. You die. Please play again.";
+	cout << "You assault the village and the other orcs hear your sneak attack coming and kill"
+	<< " your sneak attack. The rest of you soldiers die due too swords and arrows. "
+	<< "\n You have declared bloodlust in their mist and you killed many soldiers. They cant tolerate this and "
+	<< " They publicly execute you. You die. Please play again.";
 cin.get();
 	return;
 }
@@ -403,7 +408,9 @@ cin.get();
 	return;
 }
 void o_charge() {
-	cout << "You charge the ocean tribe.All your warriors swim and arrows fly. Half your warriors die. The rest storm your walls as hot tar gets poured on them. The rest of your soldiers die. The orcs send thier soldiers and they mince you. Please play again.";
+	cout << "You charge the ocean tribe.All your warriors swim and arrows fly. Half your warriors die. The rest storm your walls as hot tar gets poured on them.";
+	cout << "\n they may be polluting the ocean but they are orcs and they do not care.\n";
+	cout << "The rest of your soldiers die. The orcs send thier soldiers and they mince you. Please play again.";
 cin.get();
 	return;
 }
@@ -463,7 +470,8 @@ void push () {
 	return;
 }
 void slow () {
-	cout << " You go slowly across the desert. You try to conserve your food. AS you cross the desert you see shrubs everywhere. Try one?(Y/N)";
+	cout << " You go slowly across the desert. You try to conserve your food. AS you cross the desert you see shrubs everywhere.\n" <<
+	"You begin to question yourself, do you Try and eat one?\n(Y/N)";
 	getline(cin,answer);
 	if (answer == "Y") {
 		s_poison();
@@ -508,9 +516,12 @@ void dsrt() {
 	return;
 }
 void mt () {
-	cout << "You enter the mountains looking for the mountain clan. Immedaiatly as you enter the mountains a dart sinks into your neck. You start to feel drowsy and" <<endl <<"... dose"<<endl <<"... off...";
+	cout << "You enter the mountains looking for the mountain clan.";
+	cout << "You are not very diligent or stealthy, immedaiatly as you stumble into mountains a dart sinks into your neck.\n";
+	cout <<  "You start to feel drowsy and";
+	cout <<  endl <<"... dose"<<endl <<"... off...";
 	dart();
-cin.get();
+	cin.get();
 	return;
 }
 int main () {
@@ -583,16 +594,17 @@ void torture () {
     return;
 }
 void orc () {
-    cout << "You are in a forest."<<endl<<"You have just achieved manhood. You must go and lead a group of orcs"<<
-	endl<<" to the forest's sacred grounds, Just like your chieftan always wanted you to do. You find the other orcs when you arrive to the "<<
-	endl<<"sacred grounds, by chance you are feeling a lil unpredictable and and kidnap one of them.";
+    cout << "You are in a forest."<<endl<<"You have just achieved manhood... You realize now that  You must go and lead a group of orcs "<<
+	endl<<" to the forest's sacred grounds, Just like your chieftan always wanted you to do. You gather group and travel.\n\n\n\n---\n" <<
+	" You find the other orcs when you arrive to the " <<
+	" sacred grounds, by chance you are feeling a lil unpredictable and and kidnap one of them.";
     while(orc_sanctum());
 	cin.get();
     return;
     
 }
 int orc_sanctum () {
-    cout << "\n---Turns out they are a magic user! \nToture the captured "<<endl<<"prisoner or talk to the magic user? (TO/TA)";
+    cout << "\n---Turns out they are a magic user! \nToture the captured prisoner or talk to the magic user? (TO/TA)";
     getline(cin, answer); 
 	if (answer == "TO"){
        torture() ;
@@ -627,7 +639,7 @@ void destroy() {
       return;
 }
 void clan_chief() {
-	cout << "You can do 2 things as a clan chief. Turn your tribe into a bloodthirsty one or make it a diplomatic tribe. Which one? (War/Dip)";
+	cout << "You can do 2 things as a clan chief. Turn your tribe into a bloodthirsty one or make it a diplomatic tribe. Which one? (War/Dip)\n>>";
 	getline(cin, answer);
 	if (answer == "War") 
 	war_tribe();
